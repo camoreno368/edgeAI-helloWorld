@@ -1,4 +1,4 @@
-#include "sine_pred.h"
+#include "sine.h"
 #include <tflm_esp32.h>
 #include <eloquent_tinyml.h>
 
@@ -32,7 +32,7 @@ void setup() {
   tf.resolver.AddFullyConnected();
   tf.resolver.AddSoftmax();
 
-  while (!tf.begin(sine_pred).isOk()) {
+  while (!tf.begin(sine).isOk()) {
 
     Serial.println(tf.exception.toString());
 
